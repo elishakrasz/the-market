@@ -8,6 +8,9 @@ backend:
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
 
+editor:
+    preview: true
+
 media_folder: static/img
 public_folder: /img
 
@@ -64,3 +67,18 @@ collections:
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
           - {label: Full_image, name: full_image, widget: image}
           - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
+
+  - name: "izzy"
+    label: "Izzy"
+     folder: "src/pages/izzy"
+    create: "true"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" 
+    fields:
+    - { label: "Gallery", name: "gallery", widget: "hidden", default: "gallery" }
+    - { label: "Categories", name: "categories", widget: "list", allow_add: true, field: {label: "Category", name: "category", widget: "string" }}
+    - { label: "Price", name: "price", widget: "number" }
+    - { label: "Name", name: "name", widget: "string" }
+    - { label: "Image", name: "image", widget: "image" }
+    - { label: "Description", name: "description", widget: "text" }
+    - { label: "Inventory", name: "currentIventory", widget: "number" }
+    - { label: "Brand", name: "brand", widget: "string" }
