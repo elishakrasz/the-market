@@ -70,8 +70,8 @@ collections:
 
   - name: "izzy"
     label: "Izzy"
-     folder: "src/pages/izzy"
-    create: "true"
+    folder: "src/pages/izzy"
+    create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" 
     fields:
     - { label: "Gallery", name: "gallery", widget: "hidden", default: "gallery" }
